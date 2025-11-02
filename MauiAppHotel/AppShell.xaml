@@ -5,7 +5,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiAppHotel"
     Shell.FlyoutBehavior="Disabled"
-    Title="MauiAppHotel">
+    Title="MauiAppHotel"
+    
+    Shell.BackgroundColor="#4CAF50"
+    Shell.ForegroundColor="White">
+    <!-- Personalização da Barra de Navegação incluindo as configurações:       
+        xmlns="..."
+        Shell.BackgroundColor="#2196F3"
+        Shell.ForegroundColor="White" acima no Shell 
+    -->
+
 
     <ShellContent
         Title="Home"
