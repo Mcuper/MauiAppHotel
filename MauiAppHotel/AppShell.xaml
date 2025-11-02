@@ -6,19 +6,20 @@
     xmlns:local="clr-namespace:MauiAppHotel"
     Shell.FlyoutBehavior="Disabled"
     Title="MauiAppHotel"
-    
     Shell.BackgroundColor="#4CAF50"
     Shell.ForegroundColor="White">
-    <!-- Personalização da Barra de Navegação incluindo as configurações:       
-        xmlns="..."
-        Shell.BackgroundColor="#2196F3"
-        Shell.ForegroundColor="White" acima no Shell 
-    -->
 
+    <TabBar>
+        <ShellContent
+            Title="Home"
+            Icon="house.png" ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        <ShellContent
+            Title="Sobre"
+            Icon="info.png"
+            ContentTemplate="{DataTemplate local:SobrePage}"
+            Route="SobrePage" />
+    </TabBar>
 
 </Shell>

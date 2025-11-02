@@ -7,7 +7,7 @@
     <VerticalStackLayout
         Padding="30"
         Spacing="15"
-        VerticalOptions="CenterAndExpand"
+        VerticalOptions="Center"
         HorizontalOptions="Center">
 
         <Label
