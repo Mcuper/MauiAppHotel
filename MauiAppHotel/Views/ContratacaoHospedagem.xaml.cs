@@ -1,23 +1,31 @@
 using MauiAppHotel.Models;
+using MauiAppHotel.Views;
 
-namespace MauiAppHotel.Views;
+// O namespace 'MauiAppHotel.Views' deve ser usado se a pasta 'Views' existir
+// Caso contrário, use apenas 'MauiAppHotel'
+namespace MauiAppHotel;
 
 public partial class ContratacaoHospedagem : ContentPage
 {
     App PropriedadesApp;
 
     public ContratacaoHospedagem()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
+        // ----------------------------------------------------
+        // CÓDIGO DE INICIALIZAÇÃO MOVIDO PARA DENTRO DO CONSTRUTOR
+        // E EXECUTADO APÓS InitializeComponent()
+        // ----------------------------------------------------
         PropriedadesApp = (App)Application.Current;
 
-        pck_quarto.ItemsSource = PropriedadesApp.lista_quartos;
+        // O compilador agora reconhece pck_quarto, dtpck_checkin, etc.
+        pck_quarto.ItemsSource = PropriedadesApp.lista_quartos; 
 
-        dtpck_checkin.MinimumDate = DateTime.Now;
+        dtpck_checkin.MinimumDate = DateTime.Now; 
         dtpck_checkin.MaximumDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, DateTime.Now.Day);
 
-        dtpck_checkout.MinimumDate = dtpck_checkin.Date.AddDays(1);
+        dtpck_checkout.MinimumDate = dtpck_checkin.Date.AddDays(1); 
         dtpck_checkout.MaximumDate = dtpck_checkin.Date.AddMonths(6);
     }
 

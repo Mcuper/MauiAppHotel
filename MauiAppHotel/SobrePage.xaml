@@ -2,41 +2,44 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.SobrePage"
-             Title="Sobre o App"
+             Title="Sobre o AppHotel"
              BackgroundColor="{StaticResource Gray100}">
-    <VerticalStackLayout
-        Padding="30"
-        Spacing="15"
-        VerticalOptions="Center"
-        HorizontalOptions="Center">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
 
-        <Label
-            Text="AppHotel - Sistema de Reserva"
-            FontSize="Title"
-            FontAttributes="Bold"
-            TextColor="{StaticResource Primary}"
-            HorizontalOptions="Center" />
+            <Label
+                Text="AppHotel - Sistema de Reserva"
+                FontSize="Title"
+                FontAttributes="Bold"
+                TextColor="{StaticResource Primary}"
+                HorizontalOptions="Center" />
 
-        <Label
-            Text="Versão 1.0"
-            FontSize="Medium"
-            HorizontalOptions="Center" />
+            <Label
+                Text="Versão 1.0"
+                FontSize="Medium"
+                HorizontalOptions="Center" />
 
-        <BoxView HeightRequest="1" Color="{StaticResource Gray600}" WidthRequest="200" Margin="0,10,0,10"/>
+            <BoxView HeightRequest="1" Color="{StaticResource Gray600}" WidthRequest="200" Margin="0,10,0,10"/>
 
-        <Label
-            Text="Desenvolvido por: Marcelo Cupertino dos Santos"
-            FontSize="Small"
-            HorizontalOptions="Center" />
+            <Label
+                Text="Desenvolvido por: Marcelo C. dos Santos"
+                FontSize="Small"
+                HorizontalOptions="Center" />
 
-        <Label
-            Text="Ano de Desenvolvimento: 2025"
-            FontSize="Small"
-            HorizontalOptions="Center" />
-        <Label
-            Text="Aplicativo para efeito de aprendizagem sobre componentes de interface gráfica e Binding Context em .NET MAUI by ETEC."
-            HorizontalTextAlignment="Center"
-            Margin="0,30,0,0" />
+            <Label
+                Text="Ano de Desenvolvimento: 2025"
+                FontSize="Small"
+                HorizontalOptions="Center" />
+            <Label
+                Text="Aplicativo para efeito de aprendizagem sobre componentes de interface gráfica e Binding Context em .NET MAUI 
+                (by ETEC)."
+                HorizontalTextAlignment="Center"
+                Margin="0,20,15,0" />
 
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

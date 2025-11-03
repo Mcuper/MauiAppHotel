@@ -2,7 +2,7 @@
 {
     public class Hospedagem
     {
-        public Quarto QuartoSelecionado { get; set; }
+        public Quarto? QuartoSelecionado { get; set; } // Permite ser nulo
         public int QntAdultos { get; set; }
         public int QntCriancas { get; set; }
         public DateTime DataCheckIn { get; set; }
@@ -15,8 +15,10 @@
         {
             get
             {
-                double valor_adultos = QntAdultos * QuartoSelecionado.ValorDiariaAdulto;
-                double valor_criancas = QntCriancas * QuartoSelecionado.ValorDiariaCrianca;
+                // CORREÇÃO: Usamos o operador '!' para dizer ao compilador 
+                // que QuartoSelecionado NÃO será nulo neste ponto de execução.
+                double valor_adultos = QntAdultos * QuartoSelecionado!.ValorDiariaAdulto;
+                double valor_criancas = QntCriancas * QuartoSelecionado!.ValorDiariaCrianca;
 
                 double total = (valor_adultos + valor_criancas) * Estadia;
 
