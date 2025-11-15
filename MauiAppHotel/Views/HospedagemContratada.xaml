@@ -15,13 +15,13 @@
 
         <Frame Margin="10">
             <StackLayout  Orientation="Horizontal" >
-                <HorizontalStackLayout HorizontalOptions="Center">
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Adultos: " />
                     <Label Text="{Binding QntAdultos}" 
                            TextColor="{StaticResource Primary}" />
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout HorizontalOptions="Center">
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Crianças: " />
                     <Label Text="{Binding QntCriancas}" 
                            TextColor="{StaticResource Primary}" />
@@ -51,7 +51,7 @@
         </Frame>
 
         <Frame Margin="10">
-            <HorizontalStackLayout HorizontalOptions="Center">
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                 <Label Text="Valor Total: " />
                 <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'} "
                        TextColor="{StaticResource Primary}" />
